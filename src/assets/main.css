@@ -1,5 +1,26 @@
-@import 'tailwindcss';
-@plugin "daisyui";
+/* Vanilla base styles (TailwindCSS + DaisyUI removed) */
+
+:root {
+  --color-background: #ffffff;
+  --color-text: #2c3e50;
+  --color-heading: #111827;
+  --color-border: rgba(17, 24, 39, 0.14);
+  --section-gap: 2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+}
 
 #app {
   max-width: 1280px;
@@ -12,7 +33,7 @@ a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  transition: 0.2s ease-in-out;
   padding: 3px;
 }
 
@@ -33,4 +54,20 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+
+/* Minimal button styles (replacing DaisyUI "btn btn-secondary") */
+.btn {
+  appearance: none;
+  border: 1px solid rgba(17, 24, 39, 0.2);
+  background: rgba(17, 24, 39, 0.04);
+  color: var(--color-heading);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: rgba(17, 24, 39, 0.08);
 }

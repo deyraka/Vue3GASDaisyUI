@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && mv ./dist/index.html ./gas && clasp push",
+    "build": "vite build && node ./scripts/copy-dist-to-gas.mjs && clasp push",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
@@ -17,15 +17,12 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
-    "@tailwindcss/vite": "^4.1.4",
     "@types/google-apps-script": "^1.0.97",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/eslint-config-prettier": "^10.2.0",
-    "daisyui": "^5.0.28",
     "eslint": "^9.25.1",
     "eslint-plugin-vue": "^9.33.0",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4.1.4",
     "vite": "^6.3.3",
     "vite-plugin-singlefile": "^2.2.0",
     "vue-eslint-parser": "^10.1.3"
